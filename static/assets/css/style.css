@@ -107,6 +107,53 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(360deg);
   }
 }
+
+/******************** side navigation **********/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2487ce;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #124265;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
@@ -730,53 +777,65 @@ section {
   padding: 0;
 }
 
-
 /*--------------------------------------------------------------
-# Contact
+# Contact Me
 --------------------------------------------------------------*/
-.contact .info {
-  width: 100%;
-  background: #fff;
+.contact .info-box {
+  color: #444444;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 20px 0 30px 0;
 }
-.contact .info i {
-  font-size: 20px;
+.contact .info-box i.bx {
+  font-size: 24px;
   color: #2487ce;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #e3f0fa;
+  border-radius: 50%;
+  padding: 15px;
+  background: #ededed;
+}
+.contact .info-box h3 {
+  font-size: 20px;
+  color: #777777;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.contact .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.contact .social-links {
+  margin-top: 15px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
 }
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #124265;
+.contact .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  color: #687683;
+  line-height: 1;
+  margin: 0 8px;
+  transition: 0.3s;
+  padding: 14px;
+  border-radius: 50px;
+  border: 1px solid #dde1e4;
 }
-.contact .info p {
-  padding: 0 0 0 60px;
-  margin-bottom: 0;
-  font-size: 14px;
-  color: #217bbc;
-}
-.contact .info .email, .contact .info .phone {
-  margin-top: 40px;
-}
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #2487ce;
+.contact .social-links a:hover {
   color: #fff;
+  border-color: #2487ce;
+  background: #2487ce;
 }
 .contact .php-email-form {
-  width: 100%;
-  background: #fff;
+  box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+  padding: 27px;
 }
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
+.contact .php-email-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
 }
 .contact .php-email-form .error-message {
   display: none;
@@ -819,27 +878,26 @@ section {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
-  border-radius: 4px;
 }
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #2487ce;
+.contact .php-email-form input::focus, .contact .php-email-form textarea::focus {
+  background-color: #2487ce;
 }
 .contact .php-email-form input {
-  height: 44px;
+  padding: 10px 15px;
 }
 .contact .php-email-form textarea {
-  padding: 10px 12px;
+  padding: 12px 15px;
 }
 .contact .php-email-form button[type=submit] {
   background: #2487ce;
   border: 0;
-  padding: 10px 30px;
+  padding: 10px 24px;
   color: #fff;
   transition: 0.4s;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 .contact .php-email-form button[type=submit]:hover {
-  background: #3194db;
+  background: #ffc85a;
 }
 @-webkit-keyframes animate-loading {
   0% {
@@ -980,4 +1038,18 @@ section {
   background: #3194db;
   color: #fff;
   text-decoration: none;
+}
+.post-section {
+    background: #f5f5f5;
+    margin: 10px 0;
+    padding: 5px 0px;
+}
+.text-align-right{
+  text-align: right;
+}
+.like-\&-comments i.bx {
+    font-size: 25px;
+    color: #2487ce;
+    margin-top: 10px;
+    cursor: pointer;
 }

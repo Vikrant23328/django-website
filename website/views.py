@@ -6,21 +6,31 @@ from django.contrib import messages
 def home(request):
     return render(request,'home.html')
 
+def portfolio(request):
+    return render(request, 'portfolio-details.html')
+
+
 def login(request):
     if request.method=="POST":
+
         username = request.POST['username']
         password = request.POST["password"]
         user = auth.authenticate(username=username, password=password)
 
         if user is not None:
             auth.login(request,user)
-            return redirect('')
+            return redirect('/')
         else:
             messages.info(request,'invalid credential')
-            return redirect('login')
+            return redirect('/login')
 
     else:
         return render(request,'login.html')
+
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
+
 
 def register(request):
     if request.method == "POST":
@@ -48,13 +58,17 @@ def register(request):
                 print('user created')
                 return redirect('login')
         else:
-            print("password not maching....")
+            messages.info(request,"password not matching...")
             return redirect('/register')
-        return redirect('')
+        return redirect('/')
     else:
         return render(request,'register.html')
 
         return HttpResponse(" Welcome ")
+
+
+
+
 
 
 

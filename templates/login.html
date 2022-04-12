@@ -28,7 +28,7 @@
 
 <body>
 
-<form action="{% url 'login' %}" method="post">
+<form action="/login" method="post">
   {% csrf_token %}
 
 
@@ -41,7 +41,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto o" href="#portfolio">Portfolio</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -72,9 +72,14 @@
                 <input type="password" class="form-control" name="password" id="password" placeholder="password" required>
               </div>
               <div class="text-center">
-          <button class="btn btn-primary mt-3 mr-3" type="submit">Sign Up</button>
-        <button class="btn btn-secondary mt-3 " type="submit">Sign In</button>
+          <button class="btn btn-primary mt-3 mr-3" type="submit">Log In</button>
+<!--        <button class="btn btn-secondary mt-3 " type="submit">Sign In</button>-->
         </div>
+<div>
+  {% for message in messages %}
+  <h3> {{message}}</h3>
+  {% endfor  %}
+</div>
             </form>
           </div>
           </div>
@@ -84,6 +89,7 @@
 
       </div>
     </div>
+
   </section>
 
   <!-- ======= Footer ======= -->
@@ -109,6 +115,7 @@
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
     </div>
+
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
@@ -125,6 +132,7 @@
 
   <!-- Template Main JS File -->
   <script src="/static/assets/js/main.js"></script>
+
 </form>
 </body>
 

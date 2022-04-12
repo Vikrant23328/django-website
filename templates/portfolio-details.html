@@ -10,25 +10,25 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/static/assets/img/favicon.png" rel="icon">
+  <link href="/static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="/static/assets/css/style.css" rel="stylesheet">
 </head>
-
+/static/
 <body>
 
   <!-- ======= Header ======= -->
@@ -38,7 +38,7 @@
       <h1 class="logo"><a href="index.html">Softprodigy</a></h1>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="/">Home</a></li>
           <li><a class="nav-link scrollto o" href="#portfolio">Portfolio</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -70,20 +70,20 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-8">
+          <div class="col-lg-5">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                  <img src="/static/assets/img/portfolio/portfolio-1.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
+                  <img src="/static/assets/img/portfolio/portfolio-2.jpg" alt="">
                 </div>
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
+                  <img src="/static/assets/img/portfolio/portfolio-3.jpg" alt="">
                 </div>
 
               </div>
@@ -108,6 +108,90 @@
               </p>
             </div>
           </div>
+          <div class="col-lg-3">
+            <div class="post-info">
+              <h3>Latest Post</h3>
+              <div class="post-section">
+                <div class="row ">
+                  <div class="col-lg-4">
+                    <img src="/static/assets/img/portfolio/portfolio-1.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-lg-8">
+                    <h5>Hello</h5>
+                    <p>Autem ipsum nam porro corporis rerum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="post-section">
+                <div class="row ">
+                  <div class="col-lg-4">
+                    <img src="/static/assets/img/portfolio/portfolio-2.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-lg-8">
+                    <h5>Hello</h5>
+                    <p>Autem ipsum nam porro corporis rerum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="post-section">
+                <div class="row ">
+                  <div class="col-lg-4">
+                    <img src="/static/assets/img/portfolio/portfolio-1.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-lg-8">
+                    <h5>Hello</h5>
+                    <p>Autem ipsum nam porro corporis rerum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="post-section">
+                <div class="row ">
+                  <div class="col-lg-4">
+                    <img src="/static/assets/img/portfolio/portfolio-2.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-lg-8">
+                    <h5>Hello</h5>
+                    <p>Autem ipsum nam porro corporis rerum.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           
+           <div class="comment-sections">
+             <div class="row gy-4">
+                <div class="col-lg-9">
+                  <h3>Lorem Lipsum</h3>
+                   <p><small>By Loem Lipsum Date: 11 April 2022</small></p>
+                   <p>Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim.</p>
+                </div>
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form" id="commentform">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading"></div>
+                <div class="error-message"></div>
+                <div class="sent-message"></div>
+              </div>
+              <div class="text-left"><button class="btn btn-primary" type="submit">Send Message</button></div>
+            </form>
+             </div>
+           </div>
+
+
+
 
         </div>
 
@@ -145,16 +229,16 @@
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="/static/assets/vendor/purecounter/purecounter.js"></script>
+  <script src="/static/assets/vendor/aos/aos.js"></script>
+  <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/static/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="/static/assets/js/main.js"></script>
 
 </body>
 

@@ -26,26 +26,35 @@
   <link href="/static/assets/css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body >
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
       <h1 class="logo"><a href="#">Softprodigy</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="/home">Home</a></li>
-          <li><a class="nav-link scrollto o" href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto o" href="/register">Sign-Up</a></li>
-          <li><a class="nav-link scrollto o" href="/login">Login</a></li>
+          <li><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a class="nav-link scrollto active" href="">Home</a>
+      <a class="nav-link scrollto o" href="#portfolio">Portfolio</a>
+<!--       {% if user.is_authenticated  %}-->
+<!--      <ul>-->
+<!--      <li> &emsp; Hello, {{ user.first_name}}</li>-->
+<!--      <li><a class="nav-link scrollto active" href="/logout">Logout</a></li>-->
+<!--      {% else %}-->
+<!--      <li><a class="nav-link scrollto o" href="/register">Sign-Up</a></li>-->
+<!--      <li><a class="nav-link scrollto o" href="/login">Login</a></li>-->
+<!--      {% endif %}-->
+<!--      </ul>-->
     </div>
   </header><!-- End Header -->
 
@@ -109,7 +118,7 @@
         <div class="row">
 
           <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
-            <img src="assets/img/about-video.jpg" class="img-fluid" alt="">
+            <img src="/static/assets/img/about-video.jpg" class="img-fluid" alt="">
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
@@ -167,9 +176,22 @@
                 <p>App</p>
                 <div class="portfolio-links">
                   <a href="/static/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="/portfolio" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
+                
               </div>
+            </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                        <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
             </div>
           </div>
 
@@ -181,9 +203,21 @@
                 <p>Web</p>
                 <div class="portfolio-links">
                   <a href="/static/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="/portfolio" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
+            </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                        <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
             </div>
           </div>
 
@@ -199,6 +233,18 @@
                 </div>
               </div>
             </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                        <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
@@ -213,6 +259,18 @@
                 </div>
               </div>
             </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                        <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
@@ -221,11 +279,23 @@
               <div class="portfolio-info">
                 <h4>Web 2</h4>
                 <p>Web</p>
-                <div class="portfolio-links">
+                <div class="portfolio-links">/static/
                   <a href="/static/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
+            </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                       <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
             </div>
           </div>
 
@@ -241,6 +311,18 @@
                 </div>
               </div>
             </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                        <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
@@ -254,6 +336,18 @@
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
+            </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                        <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
             </div>
           </div>
 
@@ -269,6 +363,18 @@
                 </div>
               </div>
             </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                        <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
+            </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
@@ -283,12 +389,159 @@
                 </div>
               </div>
             </div>
+            <div class="like-&-comments">
+                <div class="row">
+                   <div class="col-md-6">
+                     <i class="bx bx-like"></i>
+                   </div>
+                   <div class="col-md-6 text-align-right">
+                        <a href="#commentform"> <i class="bx bx-comment"></i></a>
+                   </div>
+                </div>
+                   
+                  
+            </div>
           </div>
 
         </div>
 
       </div>
     </section>
+
+    <!-- ======= Contact Me Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+               <div class="section-title">
+          <span>Contact Me</span>
+          <h2>Contact Me</h2>
+          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-share-alt"></i>
+                  <h3>Social Profiles</h3>
+                  <div class="social-links">
+                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Me</h3>
+                  <p>contact@example.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Me</h3>
+                  <p>+1 5589 55488 55</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+          </div>
+
+          <div class="col-lg-3">
+
+               <div class="post-info">
+              <h3>Latest Post</h3>
+              <div class="post-section">
+                <div class="row ">
+                  <div class="col-lg-4">
+                    <img src="/static/assets/img/portfolio/portfolio-1.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-lg-8">
+                    <h5>Hello</h5>
+                    <p>Autem ipsum nam porro corporis rerum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="post-section">
+                <div class="row ">
+                  <div class="col-lg-4">
+                    <img src="/static/assets/img/portfolio/portfolio-2.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-lg-8">
+                    <h5>Hello</h5>
+                    <p>Autem ipsum nam porro corporis rerum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="post-section">
+                <div class="row ">
+                  <div class="col-lg-4">
+                    <img src="/static/assets/img/portfolio/portfolio-1.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-lg-8">
+                    <h5>Hello</h5>
+                    <p>Autem ipsum nam porro corporis rerum.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="post-section">
+                <div class="row ">
+                  <div class="col-lg-4">
+                    <img src="/static/assets/img/portfolio/portfolio-2.jpg" class="img-fluid">
+                  </div>
+                  <div class="col-lg-8">
+                    <h5>Hello</h5>
+                    <p>Autem ipsum nam porro corporis rerum.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+        </div>
+
+
+        
+
+      </div>
+    </section><!-- End Contact Me Section -->
 
   </main><!-- End #main -->
 
@@ -330,7 +583,21 @@
   <script src="/static/assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="/static/assets/js/main.js"></script>
+  <script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("header").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+  document.getElementById("header").style.marginLeft = "0px";
+  document.body.style.backgroundColor = "white";
+}
+    </script>
 
 </body>
 
